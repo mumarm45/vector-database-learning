@@ -1,0 +1,29 @@
+[project]
+name = "food-search"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [
+    {name = "mumarm45", email = "mumarm45@gmail.com"}
+]
+dependencies = [
+    "numpy<2",
+    "scipy==1.16.0",
+    "chromadb==1.0.12",
+    "sentence-transformers==4.1.0",
+    "anthropic>=0.75.0",
+    "python-dotenv==1.0.0"
+]
+
+[project.urls]
+"Source" = "https://github.com/mumarm45/food-search"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[project.scripts]
+food-search = "food_search.app:main"
